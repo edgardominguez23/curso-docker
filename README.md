@@ -58,9 +58,9 @@ Para la instalación de alguna distibucion listada:
 ---
 
 ## 🧪 Paso 4: Verificar instalación
-## 🔧 Paso 4.1: Configurar integración con WSL
+### 🔧 Paso 4.1: Configurar integración con WSL
 
-### ⚙️ Configurar WSL Integration
+#### ⚙️ Configurar WSL Integration
 
 1. Abre Docker Desktop.
 2. Ve a `Settings` → `Resources` → `WSL Integration`.
@@ -69,7 +69,7 @@ Para la instalación de alguna distibucion listada:
 
 Esto permite que Docker funcione de manera integrada dentro de tus entornos WSL (como Ubuntu, Debian, etc.).
 
-## Paso 4.2: Validar instalación y configuración
+### ✅ Paso 4.2: Validar instalación y configuración
 1. Abre Docker Desktop desde el menú de inicio.
 2. Espera a que aparezca el icono de Docker en la bandeja del sistema (barra inferior derecha).
 3. Abre una terminal (PowerShell o CMD) y ejecuta:
