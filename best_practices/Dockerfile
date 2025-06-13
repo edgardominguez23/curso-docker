@@ -5,7 +5,7 @@ FROM golang:1.22-alpine AS builder
 WORKDIR /src
 
 # Copiar archivos de dependencias primero para aprovechar el cache
-COPY go.mod go.sum ./
+COPY go.mod ./
 
 # Descargar dependencias del proyecto
 RUN go mod download
@@ -17,7 +17,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -o /app/main .
 
 # ---------- ETAPA 2: Imagen mínima para producción ----------
-FROM alpine:3.20@sha256:354c40b3453c5f06f841e92a8351ce019a1c7cc58b1efbd84fc64f8d97ebfdf3
+FROM alpine:3.20@sha256:de4fe7064d8f98419ea6b49190df1abbf43450c1702eeb864fe9ced453c1cc5f
 
 # Crear usuario y grupo sin privilegios
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
