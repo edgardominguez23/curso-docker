@@ -7,4 +7,6 @@ services:
     volumes:
       - ./notebooks:/home/jovyan/work
       - ./requirements.txt:/tmp/requirements.txt
-    command: sh -c "pip install -r /tmp/requirements.txt && start-notebook.sh"
+    command: >
+      sh -c "pip install -r /tmp/requirements.txt &&
+             start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
