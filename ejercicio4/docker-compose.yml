@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  jupyter:
+    image: jupyter/scipy-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./requirements.txt:/tmp/requirements.txt
+    command: sh -c "pip install -r /tmp/requirements.txt && start-notebook.sh"
